@@ -252,3 +252,83 @@ nav{
 .explore_card a:hover{
     color: var(--secondary-color);
 }
+
+/* ************* Classes   *******************\
+\*********************************************/
+.class_container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+.class_image{
+    position: relative;
+}
+.class_image .class_img-1{
+    position: absolute;
+    inset-inline-end: 0;
+    inset-block-start: 0;
+    max-inline-size: 500px;
+    border-radius: 10px;
+}
+.class_image .class_img-2{
+    position: absolute;
+    inset-inline-start: 0;
+    inset-block-end: 0;
+    max-inline-size: 300px;
+    border-radius: 10px;
+}
+.class_content{
+    padding: 2rem 0;
+}
+.class_content .section_header{
+    text-align: center;
+    max-inline-size: 400px;
+}
+.class_content p{
+    margin-block-end: 4rem;
+    color: var(--text-light);
+}
+
+/* *************  Join Us  *******************\
+\*********************************************/
+.join_image{
+    margin-block-start: 4rem;
+    position: relative;
+}
+.join_image img{
+    border-radius: 10px;
+}
+.join_grid{
+    position: absolute;
+    inset-block-end: -5rem;
+    inline-size: calc(100% - 4rem);
+    padding: 2rem;
+    margin: 0 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    background-color: var(--primary-colo-light);
+    border-radius: 10px;
+}
+.join_card{
+    flex: 1 1 250px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.join_card span{
+    padding: 5px 12px;
+    font-size: 1.75rem;
+    color: var(--white);
+    background-color: var(--secondary-color);
+    border-radius: 5px;
+}
+.join_card h4{
+    margin-block-end: .5rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--white);
+}
+.join_card p{
+    color: var(--text-light);
+}
