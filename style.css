@@ -332,3 +332,246 @@ nav{
 .join_card p{
     color: var(--text-light);
 }
+
+
+/* *************  Price    *******************\
+\*********************************************/
+.price_grid{
+    margin-block-start: 4rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+.price_card{
+    padding: 3rem 2rem;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--primary-colo-light);
+    border: 2px solid transparent;
+    border-radius: 10px; 
+    transition: 0.3s;
+}
+.price_card:hover{
+    background-color: var(--primary-color-extra-light);
+    border-color: var(--secondary-color);
+}
+.price_card_content{
+    flex: 1;
+    margin-block-end: 2rem;
+}
+.price_card h4{
+    margin-block-end: 1rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--white);
+}
+.price_card h3{
+    padding-block-end: 1rem;
+    margin-block-end: 2rem;
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--white);
+    border-block-end: 2px solid var(--white);
+}
+.price_card p{
+    margin-block-end: 0.75rem;
+    color: var(--white);
+}
+.price_card p i{
+    margin-inline-end: .5rem;
+    font-size: 1.2rem;
+    color: var(--secondary-color);
+}
+.price_btn{
+    color: var(--secondary-color);
+    background-color: transparent;
+    border: 2px solid var(--secondary-color);
+}
+.price_btn:hover{
+    color: var(--white);
+}
+
+
+/* *************  Review   *******************\
+\*********************************************/
+.review{
+    background-color: var(--primary-colo-light);
+}
+.review_container{
+    display: flex;
+    gap: 2rem;
+}
+.review_container > span{
+    font-size: 6rem;
+    color: var(--secondary-color);
+    opacity: 0.5;
+}
+.review_content{
+    flex: 1;
+}
+.review_content h4{
+    margin-block-end: 1rem;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--white);
+}
+.review_content p{
+    max-inline-size: 800px;
+    margin-block-end: 2rem;
+    color: var(--text-light);
+}
+.review_rating span{
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+}
+.review_footer{
+    margin-block-start: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+.review_member{
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+}
+.review_member img{
+    max-inline-size: 60px;
+    border-radius: 100%;
+}
+.review_member_details h4{
+    margin-block-end: 0;
+}
+.review_nav{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+.review_nav span{
+    font-size: 2rem;
+    color: var(--secondary-color);
+    cursor: pointer;
+}
+
+
+/* *************  FOOTER   *******************\
+\*********************************************/
+.footer_container{
+    position: relative;
+    display: grid;
+    grid-template-columns: 400px repeat(3, 1fr);
+    gap: 2rem;
+}
+.footer_blur{
+    inset-block-end: 0;
+    inset-inline-end: 0;
+}
+.footer_logo{
+    max-inline-size: 150px;
+    margin-block-end: 2rem;
+}
+.footer_col p{
+    margin-block-end: 2rem;
+    color: var(--text-light);
+}
+.footer_socials{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.footer_socials a{
+    padding: 5px 10px;
+    font-size: 1.25rem;
+    color: var(--secondary-color);
+    border: 1px solid var(--secondary-color);
+    border-radius: 100%;
+    transition: .3s;
+}
+.footer_socials a:hover{
+    color: var(--white);
+    background-color: var(--secondary-color);
+}
+.footer_col h4{
+    margin-block-end: 2rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--white);
+}
+.footer_col > a{
+    display: block;margin-block-end: 1rem;
+    color: var(--text-light);
+    transition: 0.3s;
+}
+.footer_col > :hover{
+    color: var(--secondary-color);
+}
+.footer_bar{
+    max-inline-size: var(--max-width);
+    margin: auto;
+    padding: 1rem;
+    font-size: 0.8rem;
+    color: var(--white);
+}
+
+@media (width < 900px) {
+    .nav_links{
+        display: none;
+    }
+    .header_container{grid-template-columns: repeat(1, 1fr);}
+    .header_image{
+        grid-area: 1/1/2/2;
+    }
+    .explore_grid{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+    .class_container{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .class_image{
+        min-block-size: 500px;
+    }
+    .price-grid{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .review_container{
+        gap: 2rem;
+    }
+    .footer_container{
+        grid-template-columns: 1fr 200px;
+    }
+}
+
+@media (width < 600px) {
+    .explore_header{
+        flex-direction: column;
+    }
+    .explore_grid{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .join_container{
+        margin-block-end: 15rem;
+    }
+    .join_grid{
+        inline-size: 100%;
+        margin: 0;
+        inset-block-end: -20rem;
+    }
+    .price-grid{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .review_container{
+        flex-direction: column;
+        gap: 0;
+    }
+    .review_footer{
+        flex-direction: column;
+    }
+    .footer_container{
+        grid-template-columns: 1fr 150px;
+    }
+    .footer_bar{
+        text-align: center;
+    }
+}
